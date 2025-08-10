@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Приглашение на свадьбу</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image:
+        url('https://i.pinimg.com/1200x/c6/f2/04/c6f204c6f0f56c22d62ca137cf3757b9.jpg'),
+        url('https://i.pinimg.com/1200x/c6/f2/04/c6f204c6f0f56c22d62ca137cf3757b9.jpg');
+      background-repeat: repeat, no-repeat;
+      background-position: top center, bottom center;
+      background-size: auto, cover;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 6px 10px;
+      background-color: #f3d1c8;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .map-link:hover {
+      background-color: #855b4e;
+    }
+    .container {
+      width: 90%;
+      max-width: 400px;
+      padding: 40px 0;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 38px;
+      margin: 20 0 0;
+      text-align: center;
+      user-select: none;
+      font-weight: 300;
+      color: #000;
+      text-shadow: 2px 2px 6px rgba(255,255,255,0.6);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+    .section {
+      padding: 20px 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .year-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .date-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 1;
+      font-family: 'Allura', cursive;
+      margin: 0;
+    }
+    .date-column > div {
+      margin: 0;
+      margin-top: -15px;
+    }
+    .date-column > div:first-child {
+      margin-top: 0;
+    }
+    .line {
+      width: 2px;
+      height: 100px;
+      background-color: #333;
+      margin: 0 15px;
+    }
+    .save-date {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      margin: 30px 0;
+      position: relative;
+    }
+    .names::before {
+      content: "BA";
+      position: absolute;
+      font-size: 100px;
+      color: rgba(0,0,0,0.05);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      user-select: none;
+    }
+    .greeting {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 25px 0 15px;
+    }
+    .message {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+    .final-text {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .date-time {
+      font-size: 15px;
+      color: #555;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      justify-items: center;
+      font-size: 14px;
+      margin: 10px 0 20px;
+    }
+    .calendar div {
+      padding: 8px;
+      border-radius: 8px;
+      user-select: none;
+    }
+    .calendar .marked {
+      background: #f3d1c8;
+      font-weight: bold;
+    }
+    .info {
+      margin: 15px 0;
+      font-size: 15px;
+      text-align: center;
+    }
+    a {
+      color: #333;
+      text-decoration: underline;
+    }
+    .footer-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      margin-top: 20px;
+      user-select: none;
+    }
+    .timer {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Parisienne', cursive;
+      font-size: 32px;
+      color: #333;
+    }
+    .countdown {
+      font-size: 25px;
+      margin-top: 10px;
+      letter-spacing: 2px;
+    }
+    .countdown span {
+      margin: 0 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card" id="combinedCard">
+      <h1>Приглашение на свадьбу</h1>
+
+    <div class="section">
+      <div class="year-container">
+        <div class="date-column">
+          <div>24</div>
+          <div>10</div>
+          <div>25</div>
+        </div>
+        <div class="line"></div>
+        <div class="save-date">Приглашаем вас</div>
+      </div>
+      <div class="names">Бакай & Айдана</div>
+      <div class="greeting">Уважаемый Асан Уметалиев!</div>
+      <div class="message">
+        В нашей жизни произойдет очень важное событие! Мы верим и надеемся, что этот день станет началом долгой и счастливой жизни. Приглашаем вас на торжественный вечер!
+      </div>
+      <div class="final-text">Ждем вас с нетерпением!</div>
+      <div class="date-time">24 октября 2025 года<br>в 18:00</div>
+    </div>
+
+    <div class="section">
+      <div class="calendar">
+        <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+        <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+        <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+        <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+        <div>20</div><div>21</div><div>22</div><div>23</div><div class="marked">24</div><div>25</div><div>26</div>
+        <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+      </div>
+      <div class="info">
+        <strong>Место проведения:</strong><br>
+        г. Бишкек, улица 7 апреля, 2/3<br>
+        Банкетный зал Meikin<br>
+        <a href="https://2gis.kg/bishkek/geo/70000001074870906/74.637972,42.838435"
+           target="_blank" rel="noopener noreferrer" class="map-link">
+          📍 Посмотреть на карте
+        </a>
+      </div>
+
+      <div class="timer" id="timer">
+        <div>До свадьбы осталось:</div>
+        <div class="countdown">
+          <span id="days">00</span>д
+          <span id="hours">00</span>ч
+          <span id="minutes">00</span>м
+          <span id="seconds">00</span>с
+        </div>
+      </div>
+
+      <div class="footer-names">Хозяйка торжества,<br>Динара</div>
+  </div>
+</div>
+
+<script>
+  function startCountdown(targetTime) {
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      let diff = targetTime - now;
+
+      if (diff <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const days = Math.floor(diff / day);
+      const hours = Math.floor((diff % day) / hour);
+      const minutes = Math.floor((diff % hour) / minute);
+      const seconds = Math.floor((diff % minute) / second);
+
+      daysEl.textContent = days < 10 ? '0' + days : days;
+      hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+      minutesEl.textContent = minutes < 10 ? '0' + minutes : minutes;
+      secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    updateTimer(); // первый запуск сразу
+    const timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  // Устанавливаем дату свадьбы (ISO формат с T)
+  const weddingDateStr = '2025-10-24T18:00:00';
+  const weddingDate = new Date(weddingDateStr).getTime();
+
+  if (!isNaN(weddingDate)) {
+    startCountdown(weddingDate);
+  } else {
+    console.error('Ошибка: неверный формат даты', weddingDateStr);
+    document.getElementById('timer').innerHTML = '<div>Ошибка таймера</div>';
+  }
+</script>
