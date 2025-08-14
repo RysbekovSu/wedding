@@ -8,202 +8,287 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Champignon&display=swap" rel="stylesheet" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Imperial+Script&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
-    /* CSS без изменений */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    .bakai{
+    font-family: 'Great Vibes', cursive;
+    font-size: 96px;
+    margin-top: 80px;
+    margin-bottom: -20px;
+    position: relative;
+    }
+
+    .a{
+    font-family: 'Imperial Script', cursive;
+    font-size: 106px;
+    margin: 30px 0;
+    position: relative;
+    }
+    .and{
+    font-family: 'Imperial Script', cursive;
+    font-size: 66px;
+    }
+
+    .names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 96px;
+    margin-top: -20px ;
+    position: relative;
+    }
+.names::before {
+    content: "B";
+    position: absolute;
+    font-size: 165px;
+    color: rgba(0,0,0,0.05);
+    left: 40%;
+    top: -120%;
+    transform: translate(-60%, -50%);
+    font-family: 'Great Vibes', cursive;
 }
 
-body {
-  background-image:
+.names::after {
+    content: "A";
+    position: absolute;
+    font-size: 190px;
+    color: rgba(0,0,0,0.05);
+    left: 60%;
+    top: -130%;
+    transform: translate(-40%, -50%);
+    font-family: 'Imperial Script', sans-serif; /* другой шрифт для A */
+}
+
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    background-image:
     url('https://i.pinimg.com/1200x/c6/f2/04/c6f204c6f0f56c22d62ca137cf3757b9.jpg'),
     url('https://i.pinimg.com/1200x/c6/f2/04/c6f204c6f0f56c22d62ca137cf3757b9.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: top center, bottom center;
-  background-size: auto, cover;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  margin: 0;
-  /* padding: 40px 0;  -- убрать */
-}
-
+    background-repeat: repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: auto, cover;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Bona Nova SC', sans-serif;
+    font-size: 10px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    }
 
     .map-link {
-      display: inline-block;
-      margin-top: 5px;
-      padding: 6px 10px;
-      background-color: #f3d1c8;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 6px 10px;
+    background-color: transparent;
+    border: 2px solid #0000009d;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s;
     }
+
     .map-link:hover {
-      background-color: #855b4e;
+    background-color: #f3d1c8;
+    color: #fff;
     }
+
     .container {
-      width: 90%;
-      max-width: 400px;
-        padding: 40px 0; /* теперь отступ внутри контейнера */
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 0;
+    }
+
+    h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    margin: 20 0 0;
+    text-align: center;
+    user-select: none;
+    font-weight: 300;
+    color: #000;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.6);
+    }
+
+    .card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-bottom: 20px;
+    }
+
+    .section {
+    padding: 0px 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    }
+
+    .section:last-child {
+    border-bottom: none;
+    }
+
+    .year-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+
+    .date-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+    font-family: 'Allura', cursive;
+    margin: 0;
+    }
+
+    .date-column > div {
+    margin: 0;
+    margin-top: -50px;
+    }
+
+    .date-column > div:first-child {
+    margin-top: 0;
+    }
+
+    .line {
+    width: 4px; /* шире */
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.4); /* серый с прозрачностью 0.4 */
+    margin: 10px 10px 30px 15px;
+    }
+
+
+    .save-date {
+    font-size: 18px;
+    margin-top:140px;
+    text-transform: uppercase;
+    }
+
+
+    .greeting {
+    font-size: 25px;
+    margin: 30px 0 15px;
+    position: relative; /* обязательно для ::before */
 
     }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 38px;
-      margin: 20 0 0;
-      text-align: center;
-      user-select: none;
-      font-weight: 300;
-      color: #000;
-      text-shadow: 2px 2px 6px rgba(255,255,255,0.6);
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding-bottom: 20px;
-    }
-    .section {
-      padding: 20px 15px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-    .section:last-child {
-      border-bottom: none;
-    }
-    .year-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .date-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 50px;
-      font-weight: 400;
-      line-height: 1;
-      font-family: 'Allura', cursive;
-      margin: 0;
-    }
-    .date-column > div {
-      margin: 0;
-      margin-top: -15px;
-    }
-    .date-column > div:first-child {
-      margin-top: 0;
-    }
-    .line {
-      width: 2px;
-      height: 100px;
-      background-color: #333;
-      margin: 0 15px;
-    }
-    .save-date {
-      font-size: 16px;
-      text-transform: uppercase;
-    }
-    .names {
-      font-family: 'Great Vibes', cursive;
-      font-size: 42px;
-      margin: 30px 0;
-      position: relative;
-    }
-    .names::before {
-      content: "BA";
-      position: absolute;
-      font-size: 100px;
-      color: rgba(0,0,0,0.05);
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      user-select: none;
-    }
-    .greeting {
-      font-weight: 600;
-      font-size: 18px;
-      margin: 25px 0 15px;
-    }
+
+
     .message {
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
     }
+
     .final-text {
-      font-weight: 600;
-      font-size: 16px;
-      margin-bottom: 8px;
+    font-size: 25px;
+    margin-top: 30px;
+
+    margin-bottom: 8px;
     }
+
     .date-time {
-      font-size: 15px;
-      color: #555;
+    font-size: 26px;
+    color: #555;
     }
+
     .calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      justify-items: center;
-      font-size: 14px;
-      margin: 10px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 5fr);
+    gap: 4px;
+    justify-items: center;
+    font-size: 17px;
+    margin: 30px 20px 20px;
     }
+
     .calendar div {
-      padding: 8px;
-      border-radius: 8px;
-      user-select: none;
+    padding: 4px;
+    border-radius: 4px;
+    user-select: none;
+
     }
+
+
     .calendar .marked {
-      background: #f3d1c8;
-      font-weight: bold;
+    background: #f3d1c8;
+    font-weight: bold;
+
+    border-radius: 50px; /* скругление */
     }
+
     .info {
-      margin: 15px 0;
-      font-size: 15px;
-      text-align: center;
+    margin: 30px 0;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
     }
+
+
     a {
-      color: #333;
-      text-decoration: underline;
+    color: #333;
+    text-decoration: underline;
     }
+
     .footer-names {
-      font-family: 'Great Vibes', cursive;
-      font-size: 28px;
-      margin-top: 20px;
-      user-select: none;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin-top: 20px;
+    user-select: none;
     }
+
     .timer {
-      margin-top: 30px;
-      text-align: center;
-      font-family: 'Parisienne', cursive;
-      font-size: 32px;
-      color: #333;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-size: 34px;
+    color: #333;
     }
+
     .countdown {
-      font-size: 25px;
-      margin-top: 10px;
-      letter-spacing: 2px;
+    font-size: 27px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+      margin-bottom: 40px;
+
+    }
+    .ft{
+    font-family: 'Bona Nova SC', cursive;
+    font-size: 27px;
+
     }
     .countdown span {
-      margin: 0 6px;
+    margin: 0 6px;
+
     }
   </style>
 </head>
 <body>
+<!-- Вставь в <body>, например сразу после <div class="container"> -->
+<audio id="weddingMusic" autoplay loop>
+  <source src="https://www.example.com/your-music.mp3" type="audio/mpeg">
+  Твой браузер не поддерживает аудио.
+</audio>
 
 <div class="container">
-
   <div class="card" id="combinedCard">
       <h1>Тойго чакыруу</h1>
 
@@ -217,16 +302,22 @@ body {
         <div class="line"></div>
         <div class="save-date">Сизди чакырабыз</div>
       </div>
-      <div class="names">Бакай & Айдана</div>
-      <div class="greeting">Урматтуу конок!</div>
+      <div class="bakai">Бакай</div>
+      <div class="and">&</div>
+
+      <div class="names"><span class="a"> A</span>йдана</div>
+
+      <div class="greeting">Урматтуу коноктор!</div>
       <div class="message">
-        Биздин жашообузда өтө маанилүү окуя болот! Бул күн узак жана бактылуу өмүрдүн сонун башталышы болоруна ишенебиз жана үмүттөнөбүз. Сизди салтанаттуу кечеге чакырабыз!
-      </div>
-      <div class="final-text">Сизди күтүп турабыз!</div>
-      <div class="date-time">2025-жылдын 24-октябры<br>18:00дө</div>
+Сиздерди балдарыбыздын
+үйлөнүү тоюна арналган салтанаттуу ак дасторконубуздан даам татып,
+батаңыздарды берип, кадырлуу коногубуз болуп кетүүгө чакырабыз! Биз менен бирге болуңуздар      </div>
+      <div class="final-text">Сизди күтөбүз!</div>
+      <div class="date-time">24.10.2025<div>18:00</div>
     </div>
 
     <div class="section">
+            <div class="final-text">Октябрь</div>
       <div class="calendar">
         <div>Дс</div><div>Шс</div><div>Сс</div><div>Бс</div><div>Жб</div><div>Иш</div><div>Жк</div>
         <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
@@ -236,17 +327,17 @@ body {
         <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
       </div>
       <div class="info">
-        <strong>Өткөрүлүүчү жай:</strong><br>
-        г. Бишкек, 7-апрель кочосу, 2/3<br>
+        <strong>Откорулуучу жай:</strong><br>
+        г. Бишкек, 7-апрель кочосу, 2/3
         Meikin банкет залы<br>
         <a href="https://2gis.kg/bishkek/geo/70000001074870906/74.637972,42.838435"
            target="_blank" rel="noopener noreferrer" class="map-link">
-          📍 Картадан караңыз
+             - Картадан караңыз -
         </a>
       </div>
 
       <div class="timer" id="timer">
-        <div>Тойго чейин калган убакыт:</div>
+        <div class="ft">Тойго чейин калган убакыт:</div>
         <div class="countdown">
           <span id="days">00</span>к
           <span id="hours">00</span>с
@@ -295,11 +386,10 @@ body {
     secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
   }
 
-  updateTimer(); // первый запуск сразу
+  updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
 }
 
-// Устанавливаем дату свадьбы (ISO формат с T)
 const weddingDateStr = '2025-10-24T18:00:00';
 const weddingDate = new Date(weddingDateStr).getTime();
 
@@ -310,3 +400,5 @@ if (!isNaN(weddingDate)) {
   document.getElementById('timer').innerHTML = '<div>Таймер ката берди</div>';
 }
 </script>
+</body>
+</html>
